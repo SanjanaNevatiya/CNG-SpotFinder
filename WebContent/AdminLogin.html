@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Page</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="css/bootstrap.css"> <!-- Bootstrap-Core-CSS -->
+<link rel="stylesheet" href="css/style.css" type="text/css" media="all" /> <!-- Style-CSS --> 
+<link rel="stylesheet" href="css/font-awesome.css"> <!-- Font-Awesome-Icons-CSS -->
+<style>
+/* Custom CSS styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ebebeb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh; /* Adjust height as needed */
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.header h1 a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 400px;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.login-container {
+    text-align: center;
+}
+
+.login-container h2 {
+    color: #d32f2f;
+    margin-bottom: 20px;
+}
+
+.login-form .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.login-form label {
+    color: #333;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.login-form input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #d32f2f;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+    background-color: #b71c1c;
+}
+
+p {
+    margin-top: 15px;
+}
+
+p a {
+    color: #333;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+</style>
+</head>
+<body>
+<div class="header">
+    <nav class="navbar navbar-default">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <h1><a href="index.html">IndeedFuel</a></h1>
+        </div>
+        <div class="top-nav-text">
+            <div class="nav-contact-w3ls"><i class="fa fa-phone" aria-hidden="true"></i><p>+0(12) 444 262 399</p></div> 
+        </div>
+        <!-- navbar-header -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a class="hvr-underline-from-center active" href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span data-hover="ShortCodes">Admin</span><span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="icons.html"><span data-hover="Icons">Login</span></a></li>
+                        <li><a href="typography.html"><span data-hover="Typograpghy">Register</span></a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span data-hover="ShortCodes">Fuel Station</span><span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="icons.html"><span data-hover="Icons">Login</span></a></li>
+                        <li><a href="FuelStation.html"><span data-hover="Typograpghy">Register</span></a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span data-hover="ShortCodes">User</span><span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="ULogin.html"><span data-hover="Icons">Login</span></a></li>
+                        <li><a href="typography.html"><span data-hover="Typograpghy">Register</span></a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span data-hover="ShortCodes">Delivery Person</span><span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="icons.html"><span data-hover="Icons">Login</span></a></li>
+                        <li><a href="typography.html"><span data-hover="Typograpghy"></span></a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html" class="hvr-underline-from-center">Contact</a></li>
+            </ul>
+        </div>
+        <div class="clearfix"></div>    
+    </nav>
+</div>
+<div class="container">
+    <div class="login-container">
+        <h2>Login to Your Account</h2>
+        <form action="AdminLogin" method="post" class="login-form">
+            <div class="form-group">
+                <label for="username">Email</label>
+                <input type="email" id="username" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" id="rememberMe">
+                <label for="rememberMe">Remember me</label>
+            </div>
+            <div class="form-group">
+                <button type="submit">Login</button>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

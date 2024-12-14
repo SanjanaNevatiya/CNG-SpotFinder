@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fuel Station Management System</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/font-awesome.css">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Reset some default styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Raleway', sans-serif;
+      background-color: #f5f5f5;
+    }
+    
+    .header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 0;
+    }
+    
+    .header h1 {
+      font-size: 24px;
+      text-align: center;
+      margin-top: 10px;
+    }
+    
+    .navbar {
+      border: none;
+      border-radius: 0;
+      margin-bottom: 0;
+    }
+    
+    .navbar-default .navbar-nav > li > a {
+      color: #fff;
+      font-weight: 500;
+      text-transform: uppercase;
+      padding: 10px 15px;
+    }
+    
+    .navbar-default .navbar-nav > li > a:hover,
+    .navbar-default .navbar-nav > li > a:focus {
+      background-color: #d32f2f;
+    }
+    
+    .navbar-default .navbar-toggle .icon-bar {
+      background-color: #fff;
+    }
+    
+    .content {
+      max-width: 600px;
+      margin: 30px auto;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+    }
+    
+    .login-container {
+      text-align: center;
+    }
+    
+    .login-container h2 {
+      color: #d32f2f;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    
+    .login-form {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    .form-group label {
+      display: block;
+      margin-bottom: 10px;
+      color: #555;
+      font-weight: 500;
+    }
+    
+    .form-group input[type="email"],
+    .form-group input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+    
+    .form-group button {
+      width: 100%;
+      padding: 10px;
+      background-color: #d32f2f;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+    
+    .form-group button:hover {
+      background-color: #b71c1c;
+    }
+    
+    p {
+      margin-top: 15px;
+      font-size: 14px;
+    }
+    
+    p a {
+      color: #333;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    
+    p a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <h1><a href="#">IndeedFuel</a></h1>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="admin-login.html">Login</a></li>
+                <li><a href="admin-register.html">Register</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Fuel Station <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="fuel-station-login.html">Login</a></li>
+                <li><a href="fuel-station-register.html">Register</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">User <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="user-login.html">Login</a></li>
+                <li><a href="user-register.html">Register</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Delivery Person</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <div class="content">
+    <div class="login-container">
+      <h2>Fuel Station Login</h2>
+      <form action="FuelStationLogin" method="post" class="login-form">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+        <div class="form-group">
+          <button type="submit">Login</button>
+        </div>
+      </form>
+      <p>Don't have an account? <a href="#">Register here</a></p>
+    </div>
+  </div>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.js"></script>
+</body>
+
+</html>
