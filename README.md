@@ -1,0 +1,3 @@
+- Developed a System using Java, Servlets, JSP, JDBC, and MySQL to enable seamless management of CNG pump operations and bookings.
+- Admins manage pump registrations, pump owners handle stock and bookings, and users search and book CNG services by location. 
+- Enhanced performance with dynamic JSP interfaces, Servlets for backend processing, and a robust MySQL database.
